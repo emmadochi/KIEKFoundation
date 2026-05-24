@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The KIEK Foundation | Empowering Every Child</title>
+    <meta name="description" content="The KIEK Foundation is a nonprofit organization based in Abuja, Nigeria, focused on improving the lives of less privileged children through sustainable education and child care programs.">
+    <meta name="keywords" content="The KIEK Foundation NGO in Abuja Nigeria, NGO companies in Abuja, NGO jobs in Abuja, Child care NGO in Nigeria, Education foundation in Abuja, Charity organization in Nigeria, NGOs in Nigeria and their functions, The KIEK Foundation address, KIEK Foundation Abuja">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Tailwind CSS (via CDN for development/demo) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#99437B',  /* Plum from logo */
+                            purple: '#2E1065', /* Deep Purple for overlay */
+                            gold: '#EF4444',  /* Touch of red */
+                            cream: '#F9FAFB', /* Light silver/gray background */
+                            green: '#34A853',
+                            charcoal: '#1E1E1E'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-cream text-brand-charcoal font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-white transition-colors duration-300">
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2349117991602" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-40 top-0 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="backdrop-blur-md bg-white/70 dark:bg-brand-blue/80 border border-white/20 shadow-glass rounded-2xl px-6 py-3 flex items-center justify-between transition-colors duration-300">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="logo_transparent.png" alt="The KIEK Foundation Logo" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
+                    <span class="font-heading font-bold text-xl text-brand-blue dark:text-brand-cream tracking-tight">The KIEK Foundation</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#about" class="text-brand-charcoal dark:text-brand-cream/80 hover:text-brand-gold dark:hover:text-brand-gold font-medium transition-colors">About Us</a>
+                    <a href="#programs" class="text-brand-charcoal dark:text-brand-cream/80 hover:text-brand-gold dark:hover:text-brand-gold font-medium transition-colors">Programs</a>
+                    <a href="#impact" class="text-brand-charcoal dark:text-brand-cream/80 hover:text-brand-gold dark:hover:text-brand-gold font-medium transition-colors">Impact</a>
+                    <a href="#news" class="text-brand-charcoal dark:text-brand-cream/80 hover:text-brand-gold dark:hover:text-brand-gold font-medium transition-colors">News</a>
+                    <a href="#contact" class="text-brand-charcoal dark:text-brand-cream/80 hover:text-brand-gold dark:hover:text-brand-gold font-medium transition-colors">Contact</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full text-brand-charcoal dark:text-brand-cream hover:bg-brand-gold/10 transition-colors">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+                    <a href="volunteer.html" class="px-5 py-2 rounded-full border-2 border-brand-blue dark:border-brand-gold text-brand-blue dark:text-brand-gold font-medium hover:bg-brand-blue hover:text-white dark:hover:bg-brand-gold dark:hover:text-brand-charcoal transition-all">Volunteer</a>
+                    <a href="#donate" class="px-6 py-2.5 rounded-full bg-brand-gold text-white font-medium shadow-[0_4px_14px_0_rgba(244,180,0,0.39)] hover:shadow-[0_6px_20px_rgba(244,180,0,0.23)] hover:-translate-y-0.5 transition-all">Donate Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-brand-blue dark:text-brand-cream text-2xl" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider Section -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-brand-purple">
+        
+        <!-- Slide 1 -->
+        <div class="hero-slide absolute inset-0 z-10 flex items-center pt-24 pb-12" style="opacity: 1;">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-purple/90 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Smiling children in Africa" class="absolute inset-0 w-full h-full object-cover opacity-60 slide-bg">
+            
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-20">
+                <div class="max-w-3xl">
+                    <div class="slide-content">
+                        <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold font-semibold tracking-wider text-sm mb-6 border border-brand-gold/30 backdrop-blur-sm slide-text">Empowering Every Child</span>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6 slide-text">
+                            Every Child Deserves <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-300">Hope, Education</span> & A Future.
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light leading-relaxed slide-text">
+                            Join The KIEK Foundation in Abuja, Nigeria, as we transform the lives of less privileged children through sustainable education and community empowerment.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12 slide-text">
+                            <a href="#donate" class="px-8 py-4 rounded-full bg-brand-gold text-white font-medium text-lg text-center shadow-[0_4px_20px_0_rgba(244,180,0,0.4)] hover:shadow-[0_8px_30px_rgba(244,180,0,0.5)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                                Donate Now <i class="fa-solid fa-heart"></i>
+                            </a>
+                            <a href="volunteer.html" class="px-8 py-4 rounded-full bg-white/10 text-white font-medium text-lg text-center backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+                                Become a Volunteer <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0 z-0 flex items-center pt-24 pb-12" style="opacity: 0;">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-purple/90 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2031&q=80" alt="Children learning" class="absolute inset-0 w-full h-full object-cover opacity-60 slide-bg transform scale-105">
+            
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-20">
+                <div class="max-w-3xl">
+                    <div class="slide-content">
+                        <span class="inline-block py-1 px-3 rounded-full bg-brand-green/20 text-brand-green font-semibold tracking-wider text-sm mb-6 border border-brand-green/30 backdrop-blur-sm slide-text">Sustainable Education</span>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6 slide-text">
+                            Igniting Minds Through <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-300">Quality Education</span>.
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light leading-relaxed slide-text">
+                            We provide scholarships, school supplies, and safe learning environments to ensure no child is left behind in the pursuit of knowledge.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12 slide-text">
+                            <a href="#programs" class="px-8 py-4 rounded-full bg-brand-green text-white font-medium text-lg text-center shadow-[0_4px_20px_0_rgba(52,168,83,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                                See Our Impact <i class="fa-solid fa-graduation-cap"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide absolute inset-0 z-0 flex items-center pt-24 pb-12" style="opacity: 0;">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-purple/90 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Community support" class="absolute inset-0 w-full h-full object-cover opacity-60 slide-bg transform scale-105">
+            
+            <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-20">
+                <div class="max-w-3xl">
+                    <div class="slide-content">
+                        <span class="inline-block py-1 px-3 rounded-full bg-white/20 text-white font-semibold tracking-wider text-sm mb-6 border border-white/30 backdrop-blur-sm slide-text">Community Care</span>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6 slide-text">
+                            Together We Can <span class="text-white underline decoration-brand-gold decoration-4 underline-offset-8">Break The Cycle</span> Of Poverty.
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light leading-relaxed slide-text">
+                            From nutrition programs to healthcare access, we take a holistic approach to child welfare and community development.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12 slide-text">
+                            <a href="#donate" class="px-8 py-4 rounded-full bg-brand-gold text-white font-medium text-lg text-center shadow-[0_4px_20px_0_rgba(244,180,0,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                                Sponsor a Child <i class="fa-solid fa-child-reaching"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex items-center gap-6">
+            <button id="prev-slide" class="w-12 h-12 rounded-full border border-white/30 text-white hover:bg-white/20 hover:scale-110 transition-all flex items-center justify-center backdrop-blur-md">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="flex gap-3" id="slider-dots">
+                <button class="slider-dot w-3 h-3 rounded-full bg-brand-gold transition-all" data-index="0"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-index="1"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-index="2"></button>
+            </div>
+            <button id="next-slide" class="w-12 h-12 rounded-full border border-white/30 text-white hover:bg-white/20 hover:scale-110 transition-all flex items-center justify-center backdrop-blur-md">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Floating Donation Stat (Stays on top of slides) -->
+        <div class="absolute bottom-10 right-10 z-30 hidden lg:block hero-stat opacity-0 translate-x-8">
+            <div class="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-6 shadow-2xl max-w-sm relative overflow-hidden group hover:bg-white/15 transition-colors">
+                <div class="absolute top-0 left-0 w-1 h-full bg-brand-gold"></div>
+                <p class="text-gray-300 text-sm mb-2 uppercase tracking-wide font-semibold">Live Impact</p>
+                <div class="flex items-end gap-3">
+                    <span class="text-4xl font-heading font-bold text-white counter" data-target="15420">0</span>
+                    <span class="text-gray-400 mb-1">Lives Changed</span>
+                </div>
+                <div class="mt-4 flex -space-x-3">
+                    <img class="w-10 h-10 rounded-full border-2 border-brand-blue" src="https://i.pravatar.cc/100?img=1" alt="Donor">
+                    <img class="w-10 h-10 rounded-full border-2 border-brand-blue" src="https://i.pravatar.cc/100?img=2" alt="Donor">
+                    <img class="w-10 h-10 rounded-full border-2 border-brand-blue" src="https://i.pravatar.cc/100?img=3" alt="Donor">
+                    <div class="w-10 h-10 rounded-full border-2 border-brand-blue bg-brand-gold flex items-center justify-center text-xs font-bold text-white">+2k</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statistics Section -->
+    <section id="impact" class="py-20 bg-white dark:bg-brand-charcoal transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center animate-on-scroll">
+                    <div class="w-16 h-16 mx-auto bg-brand-blue/10 dark:bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-6 text-brand-blue dark:text-brand-gold text-2xl">
+                        <i class="fa-solid fa-children"></i>
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-blue dark:text-brand-cream mb-2"><span class="counter" data-target="25000">0</span>+</h3>
+                    <p class="text-gray-600 dark:text-gray-400 font-medium uppercase tracking-wide text-sm">Children Supported</p>
+                </div>
+                <div class="text-center animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 mx-auto bg-brand-blue/10 dark:bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-6 text-brand-blue dark:text-brand-gold text-2xl">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-blue dark:text-brand-cream mb-2"><span class="counter" data-target="1500">0</span>+</h3>
+                    <p class="text-gray-600 dark:text-gray-400 font-medium uppercase tracking-wide text-sm">Scholarships Provided</p>
+                </div>
+                <div class="text-center animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 mx-auto bg-brand-blue/10 dark:bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-6 text-brand-blue dark:text-brand-gold text-2xl">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-blue dark:text-brand-cream mb-2"><span class="counter" data-target="45">0</span>+</h3>
+                    <p class="text-gray-600 dark:text-gray-400 font-medium uppercase tracking-wide text-sm">Communities Reached</p>
+                </div>
+                <div class="text-center animate-on-scroll" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 mx-auto bg-brand-blue/10 dark:bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-6 text-brand-blue dark:text-brand-gold text-2xl">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-blue dark:text-brand-cream mb-2"><span class="counter" data-target="300">0</span>+</h3>
+                    <p class="text-gray-600 dark:text-gray-400 font-medium uppercase tracking-wide text-sm">Volunteers Worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About The Foundation Section -->
+    <section id="about" class="py-24 bg-brand-cream dark:bg-gray-900 overflow-hidden transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image side -->
+                <div class="w-full lg:w-1/2 relative animate-on-scroll">
+                    <div class="absolute -inset-4 bg-brand-gold/20 rounded-3xl transform rotate-3 scale-105 transition-transform"></div>
+                    <img src="https://images.unsplash.com/photo-1593113580327-023a1a1f11e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Volunteers and children" class="relative rounded-3xl shadow-2xl object-cover h-[500px] w-full z-10">
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-white dark:bg-brand-blue p-6 rounded-2xl shadow-xl z-20 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Established</p>
+                            <p class="text-xl font-heading font-bold text-brand-blue dark:text-white">Sustainable Impact</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text side -->
+                <div class="w-full lg:w-1/2 animate-on-scroll">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-blue/10 dark:bg-brand-gold/10 text-brand-blue dark:text-brand-gold font-semibold tracking-wider text-sm mb-4 uppercase">About Us</span>
+                    <h2 class="text-4xl lg:text-5xl font-heading font-bold text-brand-blue dark:text-white mb-6 leading-tight">
+                        Transforming Lives, One Child at a Time.
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        The KIEK Foundation is a leading non-governmental organization in Abuja, Nigeria, dedicated to providing quality education, healthcare, and nutrition to underprivileged children.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+                        We believe that every child deserves a fair chance at life. Through our targeted programs and community outreach, we break the cycle of poverty and empower the next generation of African leaders.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="text-brand-gold text-2xl mt-1"><i class="fa-solid fa-eye"></i></div>
+                            <div>
+                                <h4 class="font-bold text-brand-blue dark:text-white text-lg mb-1">Our Vision</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">A world where every child reaches their full potential.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-brand-gold text-2xl mt-1"><i class="fa-solid fa-bullseye"></i></div>
+                            <div>
+                                <h4 class="font-bold text-brand-blue dark:text-white text-lg mb-1">Our Mission</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">To provide sustainable education and holistic care.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-blue dark:text-brand-gold font-bold hover:underline group text-lg">
+                        Learn more about our journey 
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs & Initiatives Section -->
+    <section id="programs" class="py-24 bg-white dark:bg-brand-charcoal transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-blue/10 dark:bg-brand-gold/10 text-brand-blue dark:text-brand-gold font-semibold tracking-wider text-sm mb-4 uppercase">Our Focus Areas</span>
+                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-brand-blue dark:text-white mb-6">
+                    Programs That Drive Real Change
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg">
+                    Discover how our comprehensive initiatives address the critical needs of children in marginalized communities across Nigeria.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Card 1 -->
+                <div class="group rounded-3xl bg-brand-cream dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/30 animate-on-scroll">
+                    <div class="w-14 h-14 bg-white dark:bg-gray-700 rounded-2xl shadow-sm flex items-center justify-center text-brand-blue dark:text-brand-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-blue dark:text-white mb-4">Child Education</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">Providing school supplies, paying tuition, and creating safe learning environments for out-of-school children.</p>
+                    <a href="#" class="text-brand-blue dark:text-brand-gold font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Program Card 2 -->
+                <div class="group rounded-3xl bg-brand-cream dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/30 animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-white dark:bg-gray-700 rounded-2xl shadow-sm flex items-center justify-center text-brand-blue dark:text-brand-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-blue dark:text-white mb-4">Feeding Initiatives</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">Tackling malnutrition through school feeding programs and community food banks to ensure no child goes hungry.</p>
+                    <a href="#" class="text-brand-blue dark:text-brand-gold font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Program Card 3 -->
+                <div class="group rounded-3xl bg-brand-cream dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/30 animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-white dark:bg-gray-700 rounded-2xl shadow-sm flex items-center justify-center text-brand-blue dark:text-brand-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-blue dark:text-white mb-4">Healthcare Support</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">Facilitating access to basic healthcare, vaccinations, and medical outreach programs in rural communities.</p>
+                    <a href="#" class="text-brand-blue dark:text-brand-gold font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Program Card 4 -->
+                <div class="group rounded-3xl bg-brand-cream dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/30 animate-on-scroll">
+                    <div class="w-14 h-14 bg-white dark:bg-gray-700 rounded-2xl shadow-sm flex items-center justify-center text-brand-blue dark:text-brand-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-blue dark:text-white mb-4">Community Outreach</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">Empowering entire communities through skills acquisition, sanitation projects, and sustainable development.</p>
+                    <a href="#" class="text-brand-blue dark:text-brand-gold font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Program Card 5 -->
+                <div class="group rounded-3xl bg-brand-cream dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-brand-gold/30 animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-white dark:bg-gray-700 rounded-2xl shadow-sm flex items-center justify-center text-brand-blue dark:text-brand-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-person-dress"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-blue dark:text-white mb-4">Girl Child Empowerment</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">Specialized programs advocating for girls' education, menstrual hygiene management, and leadership training.</p>
+                    <a href="#" class="text-brand-blue dark:text-brand-gold font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Program Card 6 (CTA) -->
+                <div class="group rounded-3xl bg-brand-blue p-8 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden animate-on-scroll flex flex-col justify-center" style="transition-delay: 200ms;">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-gold/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                    
+                    <h3 class="text-3xl font-bold text-white mb-4 relative z-10">Want to support these programs?</h3>
+                    <p class="text-brand-cream/80 mb-8 relative z-10">Your donation directly funds these initiatives, creating tangible impact in the lives of children.</p>
+                    <a href="#donate" class="bg-brand-gold text-white font-bold py-3 px-6 rounded-full inline-block text-center shadow-lg hover:shadow-xl hover:bg-yellow-500 transition-all relative z-10 w-max">
+                        Sponsor a Program
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates Section -->
+    <section id="news" class="py-24 bg-brand-purple relative overflow-hidden transition-colors duration-300">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 animate-on-scroll">
+                <div class="max-w-2xl">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 text-white font-semibold tracking-wider text-sm mb-4 uppercase backdrop-blur-md border border-white/20">Latest News</span>
+                    <h2 class="text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
+                        Foundation Updates & Stories
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Stay informed about our recent outreaches, campaigns, and the impact we're making together.
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white/20 text-white font-bold hover:bg-white hover:text-brand-purple transition-all group">
+                        View All News <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group animate-on-scroll">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community Outreach" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Outreach</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> May 15, 2026</span>
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-charcoal mb-3 group-hover:text-brand-blue transition-colors">Successful Medical Outreach in Rural Abuja</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">Over 500 children received free medical checkups and vaccinations during our weekend medical outreach program.</p>
+                        <a href="#" class="text-brand-purple font-bold flex items-center gap-2 hover:gap-3 transition-all">Read Full Story <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1427504494785-319ce515b225?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Education Scholarship" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Education</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> April 28, 2026</span>
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 4 min read</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-charcoal mb-3 group-hover:text-brand-blue transition-colors">150 New Scholarships Awarded for Fall Term</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">Thanks to our generous donors, 150 bright minds will be returning to school with full tuition and supplies covered.</p>
+                        <a href="#" class="text-brand-purple font-bold flex items-center gap-2 hover:gap-3 transition-all">Read Full Story <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Partner Visit" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Partnership</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> April 10, 2026</span>
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 3 min read</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-charcoal mb-3 group-hover:text-brand-blue transition-colors">International Corporate Partner Visits Headquarters</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">We welcomed delegates from our international partner network to discuss expanding our feeding initiatives across Nigeria.</p>
+                        <a href="#" class="text-brand-purple font-bold flex items-center gap-2 hover:gap-3 transition-all">Read Full Story <i class="fa-solid fa-arrow-right text-sm"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Success Stories -->
+    <section id="testimonials" class="py-24 bg-brand-cream dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-heading font-bold text-brand-blue dark:text-white mb-6">
+                    Stories of Hope & Resilience
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg">
+                    Real impact from the people we serve and those who help make it possible.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white dark:bg-brand-charcoal p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800 animate-on-scroll">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic leading-relaxed">
+                        "Thanks to The KIEK Foundation, I can now attend school with all the supplies I need. They didn't just give me books; they gave me a chance to dream again."
+                    </p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="Aisha" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-brand-blue dark:text-white">Aisha, 12</h4>
+                            <p class="text-sm text-gray-500">Scholarship Recipient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-brand-blue p-8 rounded-3xl shadow-xl transform md:-translate-y-4 animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-brand-cream/90 mb-6 italic leading-relaxed text-lg">
+                        "Volunteering with KIEK has been the most fulfilling experience of my life. Seeing the direct impact of our work on these children's faces is indescribable."
+                    </p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="https://i.pravatar.cc/100?img=8" alt="David" class="w-12 h-12 rounded-full object-cover border-2 border-brand-gold">
+                        <div>
+                            <h4 class="font-bold text-white">David O.</h4>
+                            <p class="text-sm text-brand-gold">Medical Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white dark:bg-brand-charcoal p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800 animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic leading-relaxed">
+                        "A truly transparent and impactful organization. We've partnered with them for two years, and the reports always show real, measurable community development."
+                    </p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="https://i.pravatar.cc/100?img=11" alt="Sarah" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-brand-blue dark:text-white">Sarah M.</h4>
+                            <p class="text-sm text-gray-500">Corporate Sponsor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trust Rating -->
+            <div class="mt-12 text-center flex items-center justify-center gap-3 animate-on-scroll">
+                <div class="flex text-brand-gold text-lg">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-brand-charcoal dark:text-gray-300 font-bold">4.8 / 5</span>
+                <span class="text-gray-500">Average Rating from Volunteers & Partners</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="py-24 bg-white dark:bg-brand-charcoal relative overflow-hidden transition-colors duration-300">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 bg-brand-blue rounded-[2.5rem] p-8 md:p-12 shadow-2xl overflow-hidden relative">
+                <!-- BG Image for Donation Card -->
+                <div class="absolute right-0 top-0 w-1/2 h-full opacity-20 hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Donate background" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-l from-transparent to-brand-blue"></div>
+                </div>
+
+                <div class="w-full lg:w-1/2 relative z-10 animate-on-scroll">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold font-semibold tracking-wider text-sm mb-4 uppercase">Make an Impact</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
+                        Your Donation Changes Lives Today.
+                    </h2>
+                    <p class="text-brand-cream/80 text-lg mb-8 max-w-lg">
+                        100% of your public donation directly funds our programs in education, healthcare, and nutrition.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-brand-cream/90">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-gold"></i> Secure, encrypted payments</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-gold"></i> Transparent impact reporting</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-gold"></i> Cancel monthly giving anytime</li>
+                    </ul>
+                </div>
+
+                <!-- Donation UI -->
+                <div class="w-full lg:w-1/2 max-w-md bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl relative z-10 animate-on-scroll" style="transition-delay: 200ms;">
+                    <!-- Tabs -->
+                    <div class="flex bg-gray-100 dark:bg-gray-700 p-1 rounded-full mb-8">
+                        <button class="flex-1 py-2 rounded-full bg-white dark:bg-gray-600 shadow-sm text-brand-blue dark:text-white font-bold text-sm transition-all">Give Once</button>
+                        <button class="flex-1 py-2 rounded-full text-gray-500 dark:text-gray-400 font-medium text-sm hover:text-brand-blue dark:hover:text-white transition-all">Monthly <span class="text-[10px] bg-brand-green/20 text-brand-green px-2 py-0.5 rounded-full ml-1 uppercase">Best</span></button>
+                    </div>
+
+                    <!-- Amounts -->
+                    <div class="grid grid-cols-3 gap-3 mb-6">
+                        <button class="py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-bold text-brand-charcoal dark:text-gray-300 hover:border-brand-gold hover:text-brand-gold transition-colors">₦5,000</button>
+                        <button class="py-3 border-2 border-brand-gold bg-brand-gold/10 rounded-xl font-bold text-brand-gold relative">₦10,000 <i class="fa-solid fa-check-circle absolute -top-2 -right-2 bg-white rounded-full"></i></button>
+                        <button class="py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-bold text-brand-charcoal dark:text-gray-300 hover:border-brand-gold hover:text-brand-gold transition-colors">₦25,000</button>
+                        <button class="py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-bold text-brand-charcoal dark:text-gray-300 hover:border-brand-gold hover:text-brand-gold transition-colors">₦50,000</button>
+                        <button class="py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-bold text-brand-charcoal dark:text-gray-300 hover:border-brand-gold hover:text-brand-gold transition-colors">₦100,000</button>
+                        <button class="py-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-bold text-gray-400 hover:border-brand-gold hover:text-brand-gold transition-colors">Custom</button>
+                    </div>
+
+                    <p class="text-sm text-center text-gray-500 mb-6"><span class="font-bold text-brand-blue dark:text-brand-gold">₦10,000</span> provides school supplies for one child for a term.</p>
+
+                    <button class="w-full py-4 rounded-xl bg-brand-gold text-white font-bold text-lg shadow-[0_4px_14px_0_rgba(244,180,0,0.39)] hover:shadow-[0_6px_20px_rgba(244,180,0,0.23)] hover:-translate-y-0.5 transition-all mb-4">
+                        Donate Securely Now
+                    </button>
+                    
+                    <div class="flex justify-center items-center gap-4 text-gray-400 text-2xl">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-stripe"></i>
+                        <i class="fa-brands fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 pt-20 pb-10 text-gray-300 border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Brand Col -->
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <img src="logo_transparent.png" alt="The KIEK Foundation Logo" class="h-10 w-auto bg-white/10 rounded p-1">
+                        <span class="font-heading font-bold text-xl text-white tracking-tight">The KIEK Foundation</span>
+                    </a>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Empowering every child through sustainable education, healthcare, and community care initiatives in Nigeria.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Our Programs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Success Stories</a></li>
+                        <li><a href="volunteer.html" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Volunteer Application</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Financials & Reports</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors text-sm">Blog & News</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-gold"></i>
+                            <span class="text-gray-400 text-sm">130 Adetokunbo Ademola Crescent, Wuse, Abuja 904101, FCT, Nigeria</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-gold"></i>
+                            <a href="tel:+2349117991602" class="text-gray-400 hover:text-white transition-colors text-sm">+234 911 799 1602</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-gold"></i>
+                            <a href="mailto:info@kiekfoundation.org" class="text-gray-400 hover:text-white transition-colors text-sm">info@kiekfoundation.org</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe to receive updates on our impact and upcoming events.</p>
+                    <form class="relative">
+                        <input type="email" placeholder="Your email address" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+                        <button type="submit" class="absolute right-2 top-2 bottom-2 bg-brand-gold text-brand-blue font-bold px-4 rounded-md hover:bg-yellow-500 transition-colors text-sm">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 The KIEK Foundation. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

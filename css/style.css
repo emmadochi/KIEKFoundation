@@ -1,0 +1,44 @@
+/* Custom Styles for The KIEK Foundation */
+
+/* Hide scrollbar for cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A2540; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F4B400; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e0a800; 
+}
+
+/* Glassmorphism utilities */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+    background: rgba(10, 37, 64, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth Scrolling & Typography Enhancements */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Specific section backgrounds or textures can be added here */
